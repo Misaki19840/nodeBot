@@ -6,8 +6,8 @@ const app = express();
 app.use(bodyParser.json());
 
 const adapter = new BotFrameworkAdapter({
-    appId: '', // No App ID needed locally
-    appPassword: '' // No Password needed locally
+    appId: process.env.MicrosoftAppId,
+    appPassword: process.env.MicrosoftAppPassword
 });
 
 const port = process.env.PORT || 3978;
